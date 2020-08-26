@@ -1,0 +1,39 @@
+a
+    color: $blue
+    text-decoration: none
+    transition: all .5s ease-in
+    &:hover,
+    &:focus
+        color: $bordo
+        text-decoration: none
+
+.h1, .h2, .h3
+    margin: 0
+
+.h1
+    font-family: 'FuturaPT', Arial, sans-serif
+    font-size: 48px
+    line-height: 48px
+    padding-bottom: 24px
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"]
+    border: none
+    background-color: transparent
+    padding: 0 5px
+    outline: none
+    &::placeholder
+        line-height: 16px
+        font-weight: 600
+        color: $middleGray
+
+input[type="search"]
+    padding-right: 10px
+    
+.content
+    width: calc(100% - 286px)
+    background-color: #F5F5F5
+    @media (max-width:1439px)
+        width: 100%

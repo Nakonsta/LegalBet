@@ -1,0 +1,32 @@
+.leagues
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    border-radius: 3px
+    padding: 16px 24px 24px
+    &__link
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        line-height: 16px
+        .flag::before
+            top: 0
+    &__title
+        padding-bottom: 16px
+        box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1)
+        .leagues__link
+            color: $text
+    &__block
+        padding: 24px 0
+        box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1)
+        &:last-child
+            box-shadow: none
+            padding-bottom: 0
+    &__subtitle
+        padding-bottom: 8px
+        color: $middleGray
+        line-height: 16px
+    &__item
+        padding: 8px 0
+    &__count
+        color: $lightGray
+        &--active
+            color: $darkGray

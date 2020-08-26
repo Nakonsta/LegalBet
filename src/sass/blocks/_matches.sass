@@ -1,0 +1,120 @@
+.matches
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        margin: auto
+        max-width: 1032px
+        width: 100%
+        @media (max-width:1439px)
+            padding: 0 5%
+        @media (max-width:767px)
+            padding: 0
+    &__left
+        width: 74%
+        @media (max-width: 1439px)
+            width: 100%
+    &__right
+        width: 23%
+        @media (max-width: 1439px)
+            display: none
+    &__tabs
+        background-color: #ffffff
+        padding: 24px 24px 0
+        box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1)
+        @media (max-width: 767px)
+            padding: 16px 0 0
+        &-inner
+            white-space: nowrap
+            overflow-x: auto
+        &-wrapper
+            box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1)
+            @media (max-width: 1439px)
+                background-color: #fff
+    &__tab
+        display: inline-block
+        line-height: 16px
+        color: $blue
+        padding-bottom: 24px
+        margin-right: 24px
+        @media (max-width: 767px)
+            padding-bottom: 16px
+            margin-right: 16px
+        &:hover .matches__tab-num,
+        &:focus .matches__tab-num
+            color: $bordo
+        &-num
+            color: $darkGray
+            margin-left: 4px
+            transition: all .5s ease-out
+            @media (max-width: 767px)
+                display: none
+        &:last-child
+            margin-right: 0
+        &--active
+            color: $text
+            box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.8)
+            .matches__tab-num
+                color: $lightGray
+        &--disabled
+            cursor: default
+            color: $gray
+        &-content
+            display: none
+            background-color: #ffffff
+            padding: 24px
+            @media (max-width: 767px)
+                padding: 15px 4%
+                background-color: #E5E5E5
+            &--active
+                display: block
+            .h1
+                @media (max-width: 767px)
+                    display: none
+        &-inner
+            @media (max-width: 767px)
+                background-color: #ffffff
+                padding-top: 17px
+                padding-bottom: 18px
+                border-radius: 3px
+    &__desc
+        font-size: 16px
+        font-weight: 400
+        padding-bottom: 24px
+        @media (max-width: 767px)
+            display: none
+    &__date
+        display: flex
+        align-items: center
+        font-family: 'FuturaPT', Arial, sans-serif
+        font-size: 24px
+        line-height: 28px
+        margin-bottom: 31px
+        @media (max-width: 767px)
+            font-size: 20px
+            margin-bottom: 13px
+        &-info
+            margin-right: 8px
+        &-day
+            color: $gray
+    &__sport
+        font-size: 16px
+        padding-left: 23px
+        position: relative
+        margin-bottom: 29px
+        @media (max-width: 767px)
+            font-size: 14px
+            margin-bottom: 16px
+        &::before
+            content: ''
+            position: absolute
+            width: 16px
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+        &--football::before
+            height: 16px
+            background: url(../images/football.png) no-repeat 50% 50%
+        &--hockey::before
+            height: 12px
+            background: url(../images/football.png) no-repeat 50% 50%

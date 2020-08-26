@@ -1,0 +1,152 @@
+.league
+    margin-bottom: 32px
+    @media (max-width: 767px)
+        margin-bottom: 16px
+    &:last-child
+        margin-right: 0
+    &__header
+        display: flex
+        color: $gray
+        padding-bottom: 8px
+        box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1)
+        margin-bottom: 8px
+        @media (max-width: 767px)
+            flex-wrap: wrap
+            padding-bottom: 4px
+            margin-bottom: 4px
+            font-size: 11px
+        &-main
+            display: flex
+            color: $text
+            white-space: nowrap
+            @media (max-width: 767px)
+                font-size: 12px
+        &-title
+            @media (max-width: 767px)
+                margin-bottom: 4px
+            &.flag::before
+                @media (max-width: 767px)
+                    top: 2px
+        &-country
+            position: relative
+            padding-right: 32px
+            @media (max-width: 1024px)
+                padding-right: 18px
+            &::after
+                content: ''
+                position: absolute
+                width: 6px
+                height: 10px
+                top: 6px
+                right: 12px
+                background: url(../images/arrow-right.png) no-repeat 50% 50%
+                @media (max-width: 1024px)
+                    right: 6px
+                @media (max-width: 767px)
+                    top: 3px
+        &-info
+            display: none
+            @media (max-width: 767px)
+                display: block
+    &__row
+        display: flex
+        align-items: center
+        padding: 4px 0
+        @media (max-width: 767px)
+            position: relative
+            align-items: flex-start
+            padding-bottom: 15px
+            box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1)
+            padding-top: 8px
+        &:last-child
+            @media (max-width: 767px)
+                box-shadow: none
+                paddin-bottom: 4px
+        &-title
+            display: flex
+            @media (max-width: 767px)
+                flex-direction: column-reverse
+                font-size: 12px
+                padding-right: 12px
+        &-countries
+            @media (max-width: 767px)
+                margin-bottom: 10px
+                min-height: 36px
+        &-time
+            color: $gray
+            margin-right: 4px
+        &-broadcast
+            display: flex
+            justify-content: center
+            align-items: center
+            @media (max-width: 767px)
+                position: absolute
+                padding-left: 42%
+                bottom: 14px
+            @media (max-width: 575px)
+                justify-content: flex-start
+            &-img
+                margin-right: 14px
+                @media (max-width: 1024px)
+                    margin-right: 4px
+                @media (max-width: 767px)
+                    margin-right: 14px
+                &:last-child
+                    margin-right: 0
+        &-forecasts
+            display: inline-block
+            border-radius: 3px
+            border: 1px solid #F4F4F4
+            width: 32px
+            height: 32px
+            text-align: center
+            line-height: 32px
+            &--empty
+                border: none
+        &-forecast
+            border: 1px solid rgba(52, 152, 219, 0.3)
+            border-radius: 3px
+            padding: 8px
+            text-align: center
+            display: inline-block
+            width: 90%
+            color: $text
+            @media (max-width: 767px)
+                width: 80%
+                color: $blue
+            &:hover,
+            &:focus
+                border-color: $blue
+                background-color: $blue
+                color: #ffffff
+    &__column
+        &-title
+            width: 30%
+            @media (max-width: 767px)
+                width: 100%
+            &.league__row-title
+                @media (max-width: 767px)
+                    width: 40%
+        &-broadcast
+            width: 22%
+            text-align: center
+            &.league__header-broadcast
+                @media (max-width: 767px)
+                    display: none
+            &.league__row-broadcast
+                @media (max-width: 767px)
+                    width: 100%
+        &-forecasts
+            width: 12%
+            text-align: center
+            @media (max-width: 767px)
+                display: none
+        &-info
+            width: 0
+            @media (max-width: 767px)
+                width: 40%
+        &-forecast
+            width: 12%
+            text-align: center
+            @media (max-width: 767px)
+                width: 20%

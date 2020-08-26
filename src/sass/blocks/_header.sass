@@ -1,0 +1,141 @@
+.header
+    padding: 17px 0
+    @media (max-width: 767px)
+        padding: 9px 0 6px
+        background-color: #ffffff
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1)
+        position: relative
+        z-index: 2
+    &__inner
+        display: flex
+        align-items: center
+        @media (max-width: 1439px)
+            justify-content: space-between
+        @media (max-width: 767px)
+            align-items: center
+    &__logo
+        margin-right: 8px
+        display: flex
+        align-items: center
+        margin-top: 2px
+        @media (max-width:1439px)
+            display: none
+        &-mobile
+            &-pic
+                margin-top: 3px
+    &__nav
+        display: flex
+        align-items: center
+        margin-right: 16px
+        @media (max-width:1439px)
+            display: none
+        &-item
+            padding: 0 12px
+        &-link
+            color: $text
+            &:hover,
+            &:focus
+                color: $blue
+    &__support
+        padding-right: 12px
+        margin-right: 22px
+        color: $middleGray
+        display: flex
+        align-items: center
+        position: relative
+        @media (max-width:1439px)
+            display: none
+        &:hover .header__support-text,
+        &:focus .header__support-text
+            color: $blue
+        &:hover .header__support-svg path,
+        &:focus .header__support-svg path
+            fill: $blue
+        &-svg
+            margin-right: 8px
+            path
+                transition: all .5s ease-out
+        &-text
+            transition: all .5s ease-out
+        &-ticket
+            position: absolute
+            width: 6px
+            height: 6px
+            top: 0
+            right: 0
+            border-radius: 50%
+            background-color: $green
+    &__search
+        position: relative
+        padding-left: 15px
+        @media (max-width:1439px)
+            display: none
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            width: 13px
+            height: 13px
+            background: url(../images/search.png)
+        &-input
+            width: 75px
+    &__account
+        position: relative
+        display: inline-block
+        width: 32px
+        height: 32px
+        flex-shrink: 0
+        border-radius: 50%
+        background: linear-gradient(134.72deg, #3023AE 0%, #C86DD7 101.5%)
+        font-size: 15px
+        color: #ffffff
+        text-transform: uppercase
+        text-align: center
+        line-height: 32px
+        @media (max-width:1439px)
+            display: none
+        &-message
+            position: absolute
+            width: 10px
+            height: 10px
+            top: 0
+            right: 0
+            border-radius: 50%
+            background-color: $red
+            border: 2px solid #ffffff
+    &__mobile-block
+        display: none
+        @media (max-width:1439px)
+            display: block
+    &__burger
+        position: relative
+        height: 14px
+        &-line
+            position: relative
+            display: inline-block
+            width: 16px
+            height: 2px
+            background-color: $text
+            &::before,
+            &::after
+                content: ''
+                position: absolute
+                width: 16px
+                height: 2px
+                left: 0
+                background-color: $text
+            &::before
+                top: -12px
+            &::after
+                top: -6px
+        &-message
+            position: absolute
+            width: 10px
+            height: 10px
+            top: -5px
+            right: -4px
+            border-radius: 50%
+            background-color: $red
+            border: 2px solid #ffffff
