@@ -9,6 +9,9 @@
         line-height: 16px
         .flag::before
             top: 0
+        &:hover .leagues__count--active,
+        &:focus .leagues__count--active
+            color: $bordo
     &__title
         padding-bottom: 16px
         box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1)
@@ -28,5 +31,6 @@
         padding: 8px 0
     &__count
         color: $lightGray
+        transition: all .5s ease-out
         &--active
             color: $darkGray
