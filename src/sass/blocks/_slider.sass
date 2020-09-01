@@ -1,0 +1,43 @@
+.slick-slide
+    outline: none
+    
+.slick-arrow.slick-disabled
+    opacity: 0
+
+.slick-arrow
+    font-size: 0
+    background-color: #fff
+    border-radius: 50%
+    border: none
+    box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.1)
+    width: 40px
+    height: 40px
+    position: absolute
+    top: 180px
+    z-index: 10
+    outline: none
+    cursor: pointer
+    transition: all .5s ease-out
+    @media (max-width: 500px)
+        display: none !important
+    &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 6px
+        height: 10px
+        background: url(../images/arrow-right.png) no-repeat 50% 50%
+    &:hover,
+    &:focus
+        box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.25)
+    &.slick-next
+        right: 0
+        transform: translate(50%, -50%)
+        &::before            
+            transform: translate(-50%, -50%)
+    &.slick-prev
+        left: 0
+        transform: translate(-50%, -50%)
+        &::before            
+            transform: translate(-50%, -50%) rotate(180deg)
